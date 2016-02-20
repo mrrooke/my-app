@@ -1,0 +1,13 @@
+---
+layout: default
+title: home
+---
+
+<section>
+{% for post in paginator.posts %}
+<paper-material>
+  <h1>{{ post.title }}</h1>
+  {{ post.content }}
+</paper-material>
+{% endfor %}
+</section>
