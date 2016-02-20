@@ -26,7 +26,7 @@ var crypto = require('crypto');
 var ensureFiles = require('./tasks/ensure-files.js');
 var cp = require('child_process')
 
-// var ghPages = require('gulp-gh-pages');
+var ghPages = require('gulp-gh-pages');
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
