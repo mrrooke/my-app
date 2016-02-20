@@ -120,8 +120,10 @@ var optimizeHtmlTask = function(src, dest) {
 // Build Jekyll
 gulp.task('jekyll', function(done) {
   browserSync.notify('Compiling Jekyll');
+  var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
+  var bundle = process.platform === "win32" ? "bundle.bat" : "bundle";
 
-  return cp.spawn('jekyll', ['build'], {
+  return cp.spawn(bundle, ['exec', 'jekyll', 'build', '-q'], {
     stdio: 'inherit'
   }).on('close', done);
 });

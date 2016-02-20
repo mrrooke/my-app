@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Polymer Starter Kit">
+  <title></title>
+
+  <!-- Place favicon.ico in the `app/` directory -->
+
+  <!-- Chrome for Android theme color -->
+  <meta name="theme-color" content="#2E3AA1">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Tile color for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PSK">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- endbuild -->
+
+  <!-- Because this project uses vulcanize this should be your only html import
+       in this file. All other imports should go in elements.html -->
+  <link rel="import" href="elements/elements.html">
+
+  <!-- For shared styles, shared-styles.html import in elements.html -->
+  <style is="custom-style" include="shared-styles"></style>
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>   
+</head>
+
+
+<body class="fullbleed layout vertical">
+  <span id="browser-sync-binding"></span>
+  <template is="dom-bind" id="app">
+
+    <paper-drawer-panel id="paperDrawerPanel">
+      <!-- Drawer Scroll Header Panel -->
+      <paper-scroll-header-panel drawer fixed>
+
+        <!-- Drawer Toolbar -->
+        <paper-toolbar id="drawerToolbar">
+          <span class="menu-name">Menu</span>
+        </paper-toolbar>
+
+        <!-- Drawer Content -->
+        <paper-menu attr-for-selected="data-route" selected="[[route]]">
+          <a href="/">
+            <iron-icon icon="home"></iron-icon>
+            <span>Home</span>
+          </a>
+
+          <a href="/blog/">
+            <iron-icon icon="description"></iron-icon>
+            <span>Weblog</span>
+          </a>
+
+          <a href="/resources/">
+            <iron-icon icon="folder"></iron-icon>
+            <span>Resources</span>
+          </a>
+
+          <a data-route="users" href="/revision/">
+            <iron-icon icon="create"></iron-icon>
+            <span>Revision</span>
+          </a>
+
+          <a data-route="contact" href="/about/">
+            <iron-icon icon="info"></iron-icon>
+            <span>About</span>
+          </a>
+        </paper-menu>
+      </paper-scroll-header-panel>
+
+      <!-- Main Area -->
+      <paper-scroll-header-panel main id="headerPanelMain" condenses>
+        <!-- Main Toolbar -->
+        <paper-toolbar id="mainToolbar">
+          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+
+          <span class="space"></span>
+
+          <!-- Application name -->
+          <div class="bottom title">
+            Mr Rooke Maths
+          </div>
+        </paper-toolbar>
+
+        <!-- Main Content -->
+        <div class="content">
+        <section>
+
+<paper-material>
+  <h1>Changing the Subject</h1>
+  <p>From questions that a few of you have been asking over the past few days,
+it seems that we are not all entirely comfortable with changing the subject of formulae. I have quickly put together the below as a bit of a crash course.</p>
+
+<p>Let me know if it is helpful, or if you want to work through with me in more detail.</p>
+
+<h3 id="changing-the-subject">Changing the subject</h3>
+<p>Sometimes a formula can be rearranged to a more useful format. For example, the formula</p>
+
+<p>[ F = 1.8C + 32]</p>
+
+<p>Which converts from degrees Centigrade to degrees Fahrenheit. It can be rearranged to the form</p>
+
+<p>$C = \ldots$</p>
+
+<p>to enable the temperature in degrees Fahrenheit to be converted to degrees Fahrenheit. We say that the formula has been rearranged to make $C$ the subject of the formula.</p>
+
+<h5 id="worked-example-one">Worked Example One</h5>
+<p>Rearrange the formula</p>
+
+<script type="math/tex; mode=display">F = 1.8C + 32</script>
+
+<p>to make $C$ the subject of the formula. The aim is to remove all terms from the right hand side of the equation except from the $C$. We do this by doing inverse operations.</p>
+
+<h5 id="solution">Solution</h5>
+<p>First, subtract $32$ from both sides of the equation. <em>It is always easier to do addition and subtraction first.</em></p>
+
+<script type="math/tex; mode=display">F - 32 = 1.8C</script>
+
+<p>Then dividing by 1.8 gives</p>
+
+<script type="math/tex; mode=display">\frac{F-32}{1.8}=C</script>
+
+<p>So the formula can be rearranged as</p>
+
+<script type="math/tex; mode=display">C=\frac{F-32}{1.8}</script>
+
+<h5 id="worked-example-two">Worked Example Two</h5>
+<p>Make $v$ the subject of the formula</p>
+
+<script type="math/tex; mode=display">s = \frac{(u+v)t}{2}</script>
+
+<h5 id="solution-1">Solution</h5>
+<p>Now, fractions make our lives difficult, so it is normally easiest to get rid of any fractions first. To do this, multiply both sides of the equation by two</p>
+
+<script type="math/tex; mode=display">2s = (u+v)t</script>
+
+<p>Our $u$ is now stuck inside the brackets, so to unwrap it we need to expand brackets, giving</p>
+
+<script type="math/tex; mode=display">2s = ut + vt</script>
+
+<p>This is now exactly the same (with slightly different numbers…) as Example One. We subtract $ut$ from both sides of the formula</p>
+
+<script type="math/tex; mode=display">2s - ut = vt</script>
+
+<p>Then dividing by $v$ gives</p>
+
+<script type="math/tex; mode=display">v = \frac{2s - ut}{t}</script>
+
+<h5 id="exercises">Exercises</h5>
+<p>Make $x$ the subject in each of the following formulae.</p>
+<div class="container">
+<div class="row">
+<div class="col-sm-4">
+(a) $y=4x$
+</div>
+<div class="col-sm-4">
+(b) $y=2x + 3$
+</div>
+<div class="col-sm-4">
+(c) $y=4x-8$
+</div>
+</div>
+<br />
+<div class="row">
+<div class="col-sm-4">
+(d) $y=\frac{x+2}{4}$
+</div>
+<div class="col-sm-4">
+(e) $y =\frac{x-2}{5}$
+</div>
+<div class="col-sm-4">
+(f) y=$x+a$
+</div>
+</div>
+<br />
+<div class="row">
+<div class="col-sm-4">
+(g) y=$\frac{x-b}{a}$
+</div>
+<div class="col-sm-4">
+(h) $y=ax+c$
+</div>
+<div class="col-sm-4">
+(i) $y=\frac{ax+b}{c}$
+</div>
+</div>
+</div>
+
+</paper-material>
+
+</section>
+
+        </div>
+      </paper-scroll-header-panel>
+    </paper-drawer-panel>
+
+
+  </template>
+
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/app.js"></script>
+  <!-- endbuild-->
+</body>
+
+</html>
