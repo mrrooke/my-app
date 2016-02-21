@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit">
-  <title></title>
+  <title>Mr Rooke Maths</title>
 
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#2E3AA1">
 
   <!-- Web Application Manifest -->
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/my-app/manifest.json">
 
   <!-- Tile color for Win8 -->
   <meta name="msapplication-TileColor" content="#3372DF">
@@ -22,34 +22,39 @@
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="PSK">
-  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+  <link rel="icon" sizes="192x192" href="/my-app/images/touch/chrome-touch-icon-192x192.png">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
-  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/my-app/images/touch/apple-touch-icon.png">
 
   <!-- Tile icon for Win8 (144x144) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileImage" content="/my-app/images/touch/ms-touch-icon-144x144-precomposed.png">
 
   <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="/my-app/styles/main.css">
   <!-- endbuild-->
 
   <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
-  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="/my-app/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <!-- endbuild -->
 
   <!-- Because this project uses vulcanize this should be your only html import
        in this file. All other imports should go in elements.html -->
-  <link rel="import" href="elements/elements.html">
+  <link rel="import" href="/my-app/elements/elements.html">
 
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
-  <script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>   
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
 </head>
 
 
@@ -67,28 +72,28 @@
         </paper-toolbar>
 
         <!-- Drawer Content -->
-        <paper-menu attr-for-selected="data-route" selected="[[route]]">
-          <a href="/">
+        <paper-menu>
+          <a href="/my-app/">
             <iron-icon icon="home"></iron-icon>
             <span>Home</span>
           </a>
 
-          <a href="/blog/">
+          <a href="/my-app/blog/">
             <iron-icon icon="description"></iron-icon>
             <span>Weblog</span>
           </a>
 
-          <a href="/resources/">
+          <a href="/my-app/resources/">
             <iron-icon icon="folder"></iron-icon>
             <span>Resources</span>
           </a>
 
-          <a data-route="users" href="/revision/">
+          <a data-route="users" href="/my-app/revision/">
             <iron-icon icon="create"></iron-icon>
             <span>Revision</span>
           </a>
 
-          <a data-route="contact" href="/about/">
+          <a data-route="contact" href="/my-app/about/">
             <iron-icon icon="info"></iron-icon>
             <span>About</span>
           </a>
@@ -114,7 +119,7 @@
         <section>
 
 <paper-material>
-  <h1>Changing the Subject</h1>
+  <h1><a href="/blog/2016/02/03/changing-the-subject/">Changing the Subject</a></h1>
   <p>From questions that a few of you have been asking over the past few days,
 it seems that we are not all entirely comfortable with changing the subject of formulae. I have quickly put together the below as a bit of a crash course.</p>
 
@@ -127,18 +132,18 @@ it seems that we are not all entirely comfortable with changing the subject of f
 
 <p>Which converts from degrees Centigrade to degrees Fahrenheit. It can be rearranged to the form</p>
 
-<p>$C = \ldots$</p>
+<script type="math/tex; mode=display">C = \ldots</script>
 
 <p>to enable the temperature in degrees Fahrenheit to be converted to degrees Fahrenheit. We say that the formula has been rearranged to make $C$ the subject of the formula.</p>
 
-<h5 id="worked-example-one">Worked Example One</h5>
+<h4 id="worked-example-one">Worked Example One</h4>
 <p>Rearrange the formula</p>
 
 <script type="math/tex; mode=display">F = 1.8C + 32</script>
 
 <p>to make $C$ the subject of the formula. The aim is to remove all terms from the right hand side of the equation except from the $C$. We do this by doing inverse operations.</p>
 
-<h5 id="solution">Solution</h5>
+<h4 id="solution">Solution</h4>
 <p>First, subtract $32$ from both sides of the equation. <em>It is always easier to do addition and subtraction first.</em></p>
 
 <script type="math/tex; mode=display">F - 32 = 1.8C</script>
@@ -151,12 +156,12 @@ it seems that we are not all entirely comfortable with changing the subject of f
 
 <script type="math/tex; mode=display">C=\frac{F-32}{1.8}</script>
 
-<h5 id="worked-example-two">Worked Example Two</h5>
+<h4 id="worked-example-two">Worked Example Two</h4>
 <p>Make $v$ the subject of the formula</p>
 
 <script type="math/tex; mode=display">s = \frac{(u+v)t}{2}</script>
 
-<h5 id="solution-1">Solution</h5>
+<h4 id="solution-1">Solution</h4>
 <p>Now, fractions make our lives difficult, so it is normally easiest to get rid of any fractions first. To do this, multiply both sides of the equation by two</p>
 
 <script type="math/tex; mode=display">2s = (u+v)t</script>
@@ -173,7 +178,7 @@ it seems that we are not all entirely comfortable with changing the subject of f
 
 <script type="math/tex; mode=display">v = \frac{2s - ut}{t}</script>
 
-<h5 id="exercises">Exercises</h5>
+<h4 id="exercises">Exercises</h4>
 <p>Make $x$ the subject in each of the following formulae.</p>
 <div class="container">
 <div class="row">
